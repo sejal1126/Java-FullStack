@@ -1,0 +1,81 @@
+
+import javax.swing.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        JFrame jf = new JFrame("User Form");
+        jf.setSize(600, 400);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setLayout(null); // Set layout before adding components
+
+        JLabel header = new JLabel("User Registration Form", SwingConstants.CENTER);
+        header.setBounds(0, 10, 500, 40); // Full width of frame
+        jf.add(header);
+
+        // Name
+        JLabel jl1 = new JLabel("Name");
+        jl1.setBounds(100, 50, 100, 30);
+        jf.add(jl1);
+
+        JTextField jt1 = new JTextField();
+        jt1.setBounds(200, 50, 200, 30);
+        jf.add(jt1);
+
+        // Email
+        JLabel jl2 = new JLabel("Email");
+        jl2.setBounds(100, 100, 100, 30);
+        jf.add(jl2);
+
+        JTextField jt3 = new JTextField();
+        jt3.setBounds(200, 100, 200, 30);
+        jf.add(jt3);
+
+        // Password
+        JLabel jl5 = new JLabel("Password");
+        jl5.setBounds(100, 150, 100, 30);
+        jf.add(jl5);
+
+        JPasswordField pf = new JPasswordField();
+        pf.setBounds(200, 150, 200, 30);
+        jf.add(pf);
+
+        // Gender
+        JLabel genderLabel = new JLabel("Gender");
+        genderLabel.setBounds(100, 200, 100, 30);
+        jf.add(genderLabel);
+
+        JRadioButton male = new JRadioButton("Male");
+        male.setBounds(200, 200, 80, 30);
+        jf.add(male);
+
+        JRadioButton female = new JRadioButton("Female");
+        female.setBounds(280, 200, 80, 30);
+        jf.add(female);
+
+        // Grouping the radio buttons
+        ButtonGroup bg = new ButtonGroup();
+        bg.add(male);
+        bg.add(female);
+
+        JLabel label = new JLabel("Select Country:");
+        label.setBounds(50, 250, 100, 30);
+        jf.add(label);
+
+        // Drop-down values
+        String[] countries = {"India", "USA", "UK", "Australia"};
+        JComboBox<String> comboBox = new JComboBox<>(countries);
+        comboBox.setBounds(160, 250, 150, 30);
+        jf.add(comboBox);
+
+        // Button to show selected value
+        JButton button = new JButton("Register");
+        button.setBounds(100, 300, 100, 30);
+        jf.add(button);
+
+        JButton button1 = new JButton("Cancel");
+        button1.setBounds(250, 300, 100, 30);
+        jf.add(button1);
+
+        // Show the frame after all components are added
+        jf.setVisible(true);
+    }
+}
