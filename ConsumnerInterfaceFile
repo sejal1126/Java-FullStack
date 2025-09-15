@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.io.*;
+
+class A
+{
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Program to check the Length of String");
+
+        Consumer<String> c =(num) -> {
+            System.out.println(num.length());
+
+        };
+        c.accept("abcdefghijklmnopqrstuvwxyz");
+
+
+
+
+
+    }
+}
